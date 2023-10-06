@@ -9,10 +9,6 @@ Xylo is an online playroom toy rotation creation app! It is your digital toy box
 - React
 - Bootstrap
 - CSS
-- JavaScript
-- Express
-- Mongoose
-- MongoDB
 
 ## User Stories
 - As a user, I want to see a home page with links and a login or sign up button.
@@ -59,9 +55,6 @@ font-family: 'Yomogi', cursive;
 
 ## Wireframes of the UI
 ![app wireframe1](https://i.imgur.com/F1EP6jm.jpg)
-
-## ERD
-![app erd](https://i.imgur.com/9UrLuph.png)
 
 ## MVP SHOWCASE
 (Screenshots here)

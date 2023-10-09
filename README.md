@@ -23,8 +23,9 @@ Xylo is an online playroom toy rotation creation app! It is your digital toy box
 - As a user, I want to see a link I can click on to access my saved information.
 - As a user, I want the ability to sort or filter through all the toys. (Bonus)
 - As a user, I want the ability to search for toys with a search bar. (Bonus)
-- As a user, I want the ability to create timeframes for my toy rotations and get a reminder to rotate upon logging in. (Bonus)
+- As a user, I want the ability to create time frames for my toy rotations and get a reminder to rotate upon logging in. (Bonus)
 - As a user, I want to click a link that shows a resource page for toy rotation ideas, user blog, connected activities, sharing options, etc. (Bonus)
+- As a user, I want to see a calendar that shows the time frames of toy rotations I have set up. (Bonus)
 
 ## Overall Design
 - Simple, clean, minimalist design and layout

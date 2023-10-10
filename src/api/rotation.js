@@ -40,7 +40,7 @@ export const createRotation = (user, newRotation) => {
 // UPDATE -> Edit Rotation
 export const updateRotation = (user, updatedRotation) => {
     return axios({
-        url: `${apiUrl}/rotations/${updatedRotation._id}`,
+        url: `${apiUrl}/rotations/${updatedRotation.id}`,
         method: 'PATCH',
         headers: {
             Authorization: `Token token=${user.token}`

@@ -34,7 +34,7 @@ const RotationsIndex = (props) => {
                 })
                 setError(true)
             })
-    }, [])
+    }, [msgAlert])
 
     // we need to account for multiple potential states of our data
     // if we have an error
@@ -53,15 +53,15 @@ const RotationsIndex = (props) => {
 
     const rotationCards = rotations.map(rotation => (
         <Card key={ rotation.id } style={{ width: '30%', margin: 5 }}>
-            <Card.Header>{ rotation.fullTitle }</Card.Header>
-            <Card.Body>
-                <Card.Text>
+            <Card.Header key={ rotation.name }>{ rotation.name }</Card.Header>
+            <Card.Body key={ rotation.id }>
+                <Card.Text key={ rotation.id }>
                     <Link to={`/rotations/${rotation.id}`} className='btn btn-info'>
                         View { rotation.name }
                     </Link>
                 </Card.Text>
                 { rotation.owner ? 
-                    <Card.Footer>owner: {rotation.owner.email}</Card.Footer>
+                    <Card.Footer key={ rotation.id }>owner: {rotation.owner.email}</Card.Footer>
                 : null }
             </Card.Body>
         </Card>

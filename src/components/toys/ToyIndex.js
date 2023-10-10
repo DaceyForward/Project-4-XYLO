@@ -34,7 +34,7 @@ const ToysIndex = (props) => {
                 })
                 setError(true)
             })
-    }, [])
+    }, [msgAlert])
 
     // we need to account for multiple potential states of our data
     // if we have an error
@@ -53,15 +53,15 @@ const ToysIndex = (props) => {
 
     const toyCards = toys.map(toy => (
         <Card key={ toy.id } style={{ width: '30%', margin: 5 }}>
-            <Card.Header>{ toy.fullTitle }</Card.Header>
-            <Card.Body>
-                <Card.Text>
+            <Card.Header key={ toy.name }>{ toy.name }</Card.Header>
+            <Card.Body key={ toy.id }>
+                <Card.Text key={ toy.id }>
                     <Link to={`/toys/${toy.id}`} className='btn btn-info'>
                         View { toy.name }
                     </Link>
                 </Card.Text>
                 { toy.owner ? 
-                    <Card.Footer>owner: {toy.owner.email}</Card.Footer>
+                    <Card.Footer key={ toy.id }>owner: {toy.owner.email}</Card.Footer>
                 : null }
             </Card.Body>
         </Card>

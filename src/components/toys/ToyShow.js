@@ -108,10 +108,10 @@ const ToyShow = (props) => {
     return (
         <>
             <Container className='m-2'>
-                <Card>
-                    <Card.Header>{ toy.name }</Card.Header>
-                    <Card.Body>
-                        <Card.Text>
+                <Card className='showColor'>
+                    <Card.Header className='showColorHeader'>{ toy.name }</Card.Header>
+                    <Card.Body className='showColor'>
+                        <Card.Text className='showColor'>
                             <small>Name: {toy.name}</small><br/>
                             <small>Level: {toy.level}</small><br/>
                             <small>Focus Area: {toy.focusArea}</small><br/>
@@ -119,11 +119,11 @@ const ToyShow = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        <Button className="m-2" variant="info"
+                        {/* <Button className="m-2" variant="info"
                             // onClick={() => setToyModalShow(true)}
                         >
                             Add your toy!
-                        </Button>
+                        </Button> */}
                         {
                             toy.owner && user && toy.owner._id === user._id
                             ?

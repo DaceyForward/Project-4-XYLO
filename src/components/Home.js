@@ -1,6 +1,7 @@
-import ToysIndex from "./toys/ToyIndex"
-import RotationsIndex from "./rotations/RotationIndex"
+// import ToysIndex from "./toys/ToyIndex"
+// import RotationsIndex from "./rotations/RotationIndex"
 import { Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Home = (props) => {
 	const { msgAlert, user } = props
@@ -8,10 +9,16 @@ const Home = (props) => {
 
 	return (
 		<Container className='m-2' style={{ textAlign: 'center' }}>
-			<h2>See All The Toys</h2>
-			<ToysIndex msgAlert={msgAlert} />
-			<h2>See All Your Rotations</h2>
-			<RotationsIndex msgAlert={msgAlert} />
+			<h1>Welcome To Xylo</h1>
+			<h3>The Digital Toy Box</h3>
+			<Link to={'/about'} className='btn btn-info'>
+                Learn More!
+            </Link>
+			<br />
+			<br />
+			<Link to={'/sign-up'} className='btn btn-info'>
+                Sign Up Here
+            </Link>
 		</Container>
 	)
 }

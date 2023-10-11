@@ -9,6 +9,8 @@ import Header from './components/shared/Header'
 import RequireAuth from './components/shared/RequireAuth'
 import Home from './components/Home'
 import About from './components/About'
+import ToyBox from './components/ToyBox'
+import Playroom from './components/Playroom'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
@@ -72,6 +74,14 @@ const App = () => {
 				<Route 
 					path='/about' 
 					element={<About msgAlert={msgAlert} user={user} />} 
+				/>
+				<Route 
+					path='/toys' 
+					element={<ToyBox msgAlert={msgAlert} user={user} />} 
+				/>
+				<Route 
+					path='/rotations' 
+					element={<Playroom msgAlert={msgAlert} user={user} />} 
 				/>
 				<Route
 					path='/sign-up'

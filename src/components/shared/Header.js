@@ -2,13 +2,26 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
+// import './index.css'
+
 const linkStyle = {
     color: 'white',
-    textDecoration: 'none'
+    textDecoration: 'none',
+	background: 'rgb(135, 201, 236)'
 }
 const authenticatedOptions = (
 	<>
 		<Nav.Item className='m-2'>
+			<Link to='/toys' style={linkStyle}>
+				Toy Box
+			</Link>
+		</Nav.Item>
+		<Nav.Item className='m-2'>
+			<Link to='/rotations' style={linkStyle}>
+				Playroom
+			</Link>
+		</Nav.Item>
+		{/* <Nav.Item className='m-2'>
 			<Link to='create-toy' style={linkStyle}>
 				Add Toy
 			</Link>
@@ -17,7 +30,7 @@ const authenticatedOptions = (
 			<Link to='create-rotation' style={linkStyle}>
 				Add Rotation
 			</Link>
-		</Nav.Item>
+		</Nav.Item> */}
 		<Nav.Item className='m-2'>
 			<Link to='change-password' style={linkStyle}>
 				Change Password
@@ -53,8 +66,8 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
-		<Navbar.Brand className='m-2'>
+	<Navbar className='NavColor' variant='dark' expand='md'>
+		<Navbar.Brand className='logoFont m-2'>
             <Link to='/' style={linkStyle}>
                 XYLO
             </Link>

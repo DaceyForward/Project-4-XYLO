@@ -1,13 +1,92 @@
+* {
+  background-color: #e7dfd9;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Klee One', cursive !important;
+  font-weight: bold;
+  font-size: 2vmin !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e7dfd9;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.NavColor {
+  background-color: rgb(135, 201, 236) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+span {
+  background-color: rgb(135, 201, 236) !important;
+  
+}
+
+#basic-navbar-nav {
+  background-color: rgb(135, 201, 236) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ml-auto {
+  background-color: rgb(135, 201, 236) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a {
+  background-color: rgb(135, 201, 236) !important;
+
+}
+
+h1 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 10vmin !important;
+}
+
+h3, h2 {
+  font-family: 'Yomogi', cursive;
+  font-size: 4vmin !important;
+}
+
+.logoFont {
+  font-family: 'Love Ya Like A Sister', cursive !important;
+  font-size: 6vmin !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.cardBody {
+  background-color: white !important;
+}
+
+h4 {
+  font-family: 'Yomogi', cursive;
+  font-size: 4vmin !important;
+}
+
+.playroomName {
+  font-size: 7vmin !important;
+}
+
+.toyCards, .rotationCards {
+  background-color: white !important;
+}
+
+.card-body, .card-text, small {
+  background-color: white !important;
+}
+
+.toyCardHeader {
+  background-color: rgb(241, 236, 250) !important;
+}
+
+.rotationCardsHeader {
+  background-color: rgb(224, 244, 235) !important;
 }

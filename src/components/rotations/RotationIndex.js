@@ -52,17 +52,17 @@ const RotationsIndex = (props) => {
     console.log('the rotations in RotationIndex', rotations)
 
     const rotationCards = rotations.map(rotation => (
-        <Card key={ rotation._id } style={{ width: '30%', margin: 5 }}>
-            <Card.Header >{ rotation.name }</Card.Header>
-            <Card.Body >
-                <Card.Text >
+        <Card className='rotationCards' key={ rotation._id } style={{ width: '30%', margin: 5 }}>
+            <Card.Header className='rotationCardsHeader'>{ rotation.name }</Card.Header>
+            <Card.Body className='rotationCards'>
+                <Card.Text className='rotationCards'>
                     <Link to={`/rotations/${rotation._id}`} className='btn btn-info'>
                         Details
                     </Link>
                 </Card.Text>
-                { rotation.owner ? 
+                {/* { rotation.owner ? 
                     <Card.Footer >owner: {rotation.owner.firstName}</Card.Footer>
-                : null }
+                : null } */}
             </Card.Body>
         </Card>
     ))

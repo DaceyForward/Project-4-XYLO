@@ -68,7 +68,7 @@ const RotationCreate = (props) => {
         // first we want to send our create request
         createRotation(user, rotation)
             // then navigate the user to the show page if successful
-            .then(res => { navigate(`/rotations/${res.data.rotation.id}`)})
+            .then(res => { navigate(`/rotations/${res.data.rotation._id}`)})
             // send a success message
             .then(() => {
                 msgAlert({

@@ -57,7 +57,7 @@ const RotationsIndex = (props) => {
             <Card.Body >
                 <Card.Text >
                     <Link to={`/rotations/${rotation._id}`} className='btn btn-info'>
-                        View { rotation.name }
+                        Details
                     </Link>
                 </Card.Text>
                 { rotation.owner ? 

@@ -68,7 +68,7 @@ const ToyCreate = (props) => {
         // first we want to send our create request
         createToy(user, toy)
             // then navigate the user to the show page if successful
-            .then(res => { navigate(`/toys/${res.data.toy.id}`)})
+            .then(res => { navigate(`/toys/${res.data.toy._id}`)})
             // send a success message
             .then(() => {
                 msgAlert({

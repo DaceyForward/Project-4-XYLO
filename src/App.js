@@ -47,7 +47,7 @@ const App = () => {
 
 	const deleteAlert = (id) => {
 		setMsgAlerts((prevState) => {
-			return (prevState.filter((msg) => msg.id !== id) )
+			return (prevState.filter((msg) => msg._id !== id) )
 		})
 	}
 
@@ -122,11 +122,11 @@ const App = () => {
 			</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
-						key={msgAlert.id}
+						key={msgAlert._id}
 						heading={msgAlert.heading}
 						variant={msgAlert.variant}
 						message={msgAlert.message}
-						id={msgAlert.id}
+						id={msgAlert._id}
 						deleteAlert={deleteAlert}
 					/>
 				))}

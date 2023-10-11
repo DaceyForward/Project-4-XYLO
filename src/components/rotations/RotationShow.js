@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import LoadingScreen from '../shared/LoadingScreen'
-// import EditPetModal from './EditPetModal'
+import EditRotationModal from './EditRotationModal'
 // import NewRotationModal from '../rotations/NewRotationModal'
 // import ToyShow from '../toys/ToyShow'
 import { useNavigate } from 'react-router-dom'
@@ -25,7 +25,7 @@ const rotationCardContainerLayout = {
 
 const RotationShow = (props) => {
     const [rotation, setRotation] = useState(null)
-    // const [editModalShow, setEditModalShow] = useState(false)
+    const [editModalShow, setEditModalShow] = useState(false)
     // const [rotationModalShow, setRotationModalShow] = useState(false)
     // this is a boolean that we can alter to trigger a page re-render
     const [updated, setUpdated] = useState(false)
@@ -58,7 +58,7 @@ const RotationShow = (props) => {
                     variant: 'danger'
                 })
             })
-    }, [id, msgAlert])
+    }, [id, msgAlert, updated])
 
     const rotationRemoval = () => {
         // we want to remove the rotation
@@ -121,18 +121,18 @@ const RotationShow = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        <Button className="m-2" variant="info"
+                        {/* <Button className="m-2" variant="info"
                             // onClick={() => setRotationModalShow(true)}
                         >
                             Add your rotation!
-                        </Button>
+                        </Button> */}
                         {
                             rotation.owner && user && rotation.owner._id === user._id
                             ?
                             <>
                                 <Button 
                                     className="m-2" variant="warning"
-                                    // onClick={() => setEditModalShow(true)}
+                                    onClick={() => setEditModalShow(true)}
                                 >
                                     Edit
                                 </Button>
@@ -152,7 +152,7 @@ const RotationShow = (props) => {
             <Container className='m-2' style={rotationCardContainerLayout}>
                 {rotationCards}
             </Container>
-            {/* <EditRotationModal 
+            <EditRotationModal 
                 user={user}
                 show={editModalShow}
                 updateRotation={updateRotation}
@@ -161,7 +161,7 @@ const RotationShow = (props) => {
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 rotation={rotation}
             />
-            <NewRotationModal 
+            {/* <NewRotationModal 
                 rotation={rotation}
                 show={rotationModalShow}
                 msgAlert={msgAlert}

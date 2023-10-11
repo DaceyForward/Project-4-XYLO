@@ -58,7 +58,7 @@ const ToyShow = (props) => {
                     variant: 'danger'
                 })
             })
-    }, [id, msgAlert])
+    }, [id, msgAlert, updated])
 
     const toyRemoval = () => {
         // we want to remove the toy

@@ -59,7 +59,7 @@ const ToysIndex = (props) => {
             <Card.Body >
                 <Card.Text >
                     <Link to={`/toys/${toy._id}`} className='btn btn-info'>
-                        View { toy.name }
+                        Details
                     </Link>
                 </Card.Text>
                 { toy.owner ? 

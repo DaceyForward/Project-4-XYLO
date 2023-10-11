@@ -90,3 +90,13 @@ h4 {
 .rotationCardsHeader {
   background-color: rgb(224, 244, 235) !important;
 }
+
+.toyButton {
+  background-color: rgb(248, 215, 201) !important;
+  border: none !important;
+}
+
+.rotButton {
+  background-color: rgb(248, 239, 201) !important;
+  border: none !important;
+}

@@ -58,13 +58,13 @@ const ToysIndex = (props) => {
             <Card.Header className='toyCardHeader'>{ toy.name }</Card.Header>
             <Card.Body className='toyCards'>
                 <Card.Text className='toyCards'>
-                    <Link to={`/toys/${toy._id}`} className='btn btn-info'>
+                    <Link to={`/toys/${toy._id}`} className='toyButton btn btn-info'>
                         Details
                     </Link>
                 </Card.Text>
-                { toy.owner ? 
+                {/* { toy.owner ? 
                     <Card.Footer >owner: {toy.owner.firstName}</Card.Footer>
-                : null }
+                : null } */}
             </Card.Body>
         </Card>
     ))

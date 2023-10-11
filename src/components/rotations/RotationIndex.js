@@ -56,7 +56,7 @@ const RotationsIndex = (props) => {
             <Card.Header className='rotationCardsHeader'>{ rotation.name }</Card.Header>
             <Card.Body className='rotationCards'>
                 <Card.Text className='rotationCards'>
-                    <Link to={`/rotations/${rotation._id}`} className='btn btn-info'>
+                    <Link to={`/rotations/${rotation._id}`} className='rotButton btn btn-info'>
                         Details
                     </Link>
                 </Card.Text>

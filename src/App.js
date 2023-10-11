@@ -14,6 +14,8 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import ToyShow from './components/toys/ToyShow'
 import RotationShow from './components/rotations/RotationShow'
+import ToyCreate from './components/toys/ToyCreate'
+import RotationCreate from './components/rotations/RotationCreate'
 
 const App = () => {
 
@@ -73,14 +75,22 @@ const App = () => {
 						<ChangePassword msgAlert={msgAlert} user={user} />
 					</RequireAuth>}
 				/>
-				{/* <Route 
+				<Route 
 					path='/create-toy'
 					element={
 						<RequireAuth user={user}>
 							<ToyCreate user={user} msgAlert={msgAlert} />
 						</RequireAuth>
 					}
-				/> */}
+				/>
+				<Route 
+					path='/create-rotation'
+					element={
+						<RequireAuth user={user}>
+							<RotationCreate user={user} msgAlert={msgAlert} />
+						</RequireAuth>
+					}
+				/>
 				<Route 
 					path='toys/:id'
 					element={

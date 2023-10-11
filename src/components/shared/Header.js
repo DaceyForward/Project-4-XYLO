@@ -9,6 +9,16 @@ const linkStyle = {
 const authenticatedOptions = (
 	<>
 		<Nav.Item className='m-2'>
+			<Link to='create-toy' style={linkStyle}>
+				Add Toy
+			</Link>
+		</Nav.Item>
+		<Nav.Item className='m-2'>
+			<Link to='create-rotation' style={linkStyle}>
+				Add Rotation
+			</Link>
+		</Nav.Item>
+		<Nav.Item className='m-2'>
 			<Link to='change-password' style={linkStyle}>
 				Change Password
 			</Link>

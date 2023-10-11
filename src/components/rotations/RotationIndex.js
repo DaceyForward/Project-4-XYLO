@@ -53,15 +53,15 @@ const RotationsIndex = (props) => {
 
     const rotationCards = rotations.map(rotation => (
         <Card key={ rotation._id } style={{ width: '30%', margin: 5 }}>
-            <Card.Header key={ rotation.name }>{ rotation.name }</Card.Header>
-            <Card.Body key={ rotation._id }>
-                <Card.Text key={ rotation._id }>
+            <Card.Header >{ rotation.name }</Card.Header>
+            <Card.Body >
+                <Card.Text >
                     <Link to={`/rotations/${rotation._id}`} className='btn btn-info'>
                         View { rotation.name }
                     </Link>
                 </Card.Text>
                 { rotation.owner ? 
-                    <Card.Footer key={ rotation._id }>owner: {rotation.owner.firstName}</Card.Footer>
+                    <Card.Footer >owner: {rotation.owner.firstName}</Card.Footer>
                 : null }
             </Card.Body>
         </Card>

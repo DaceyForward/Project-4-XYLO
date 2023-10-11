@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import LoadingScreen from '../shared/LoadingScreen'
-// import EditToyModal from './EditToyModal'
+import EditToyModal from './EditToyModal'
 // import NewToyModal from '../toys/NewToyModal'
 // import ToyShow from '../toys/ToyShow'
 import { useNavigate } from 'react-router-dom'
@@ -25,7 +25,7 @@ const toyCardContainerLayout = {
 
 const ToyShow = (props) => {
     const [toy, setToy] = useState(null)
-    // const [editModalShow, setEditModalShow] = useState(false)
+    const [editModalShow, setEditModalShow] = useState(false)
     // const [toyModalShow, setToyModalShow] = useState(false)
     // this is a boolean that we can alter to trigger a page re-render
     const [updated, setUpdated] = useState(false)
@@ -130,7 +130,7 @@ const ToyShow = (props) => {
                             <>
                                 <Button 
                                     className="m-2" variant="warning"
-                                    // onClick={() => setEditModalShow(true)}
+                                    onClick={() => setEditModalShow(true)}
                                 >
                                     Edit
                                 </Button>
@@ -150,7 +150,7 @@ const ToyShow = (props) => {
             <Container className='m-2' style={toyCardContainerLayout}>
                 {toyCards}
             </Container>
-            {/* <EditToyModal 
+            <EditToyModal 
                 user={user}
                 show={editModalShow}
                 updateToy={updateToy}
@@ -159,7 +159,7 @@ const ToyShow = (props) => {
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 toy={toy}
             />
-            <NewToyModal 
+            {/* <NewToyModal 
                 toy={toy}
                 show={toyModalShow}
                 msgAlert={msgAlert}

@@ -62,7 +62,7 @@ const ToyShow = (props) => {
 
     const toyRemoval = () => {
         // we want to remove the toy
-        deleteToy(user, toy.id)
+        deleteToy(user, toy._id)
             // send a success message
             .then(() =>
                 msgAlert({
@@ -88,7 +88,7 @@ const ToyShow = (props) => {
         if (toy.length > 0) {
             toyCards = toy.map(toy => (
                 <ToyShow 
-                    key={toy.id}
+                    key={toy._id}
                     toy={toy}
                     msgAlert={msgAlert}
                     triggerRefresh={() => setUpdated(prev => !prev)}
@@ -97,7 +97,7 @@ const ToyShow = (props) => {
                 />
             ))
         } else {
-            toyCards = <p>No toys added to your toy box yet.</p>
+            toyCards = <p></p>
         }
     }
 
@@ -125,7 +125,7 @@ const ToyShow = (props) => {
                             Add your toy!
                         </Button> */}
                         {
-                            toy.owner && user && toy.owner.id === user.id
+                            toy.owner && user && toy.owner._id === user._id
                             ?
                             <>
                                 {/* <Button 

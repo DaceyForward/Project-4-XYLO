@@ -51,17 +51,19 @@ const ToysIndex = (props) => {
     }
     console.log('the toys in ToyIndex', toys)
 
+
+
     const toyCards = toys.map(toy => (
-        <Card key={ toy.id } style={{ width: '30%', margin: 5 }}>
+        <Card key={ toy._id } style={{ width: '30%', margin: 5 }}>
             <Card.Header key={ toy.name }>{ toy.name }</Card.Header>
-            <Card.Body key={ toy.id }>
-                <Card.Text key={ toy.id }>
-                    <Link to={`/toys/${toy.id}`} className='btn btn-info'>
+            <Card.Body key={ toy._id }>
+                <Card.Text key={ toy._id }>
+                    <Link to={`/toys/${toy._id}`} className='btn btn-info'>
                         View { toy.name }
                     </Link>
                 </Card.Text>
                 { toy.owner ? 
-                    <Card.Footer key={ toy.id }>owner: {toy.owner.email}</Card.Footer>
+                    <Card.Footer key={ toy._id }>owner: {toy.owner.firstName}</Card.Footer>
                 : null }
             </Card.Body>
         </Card>

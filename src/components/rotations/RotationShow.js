@@ -62,7 +62,7 @@ const RotationShow = (props) => {
 
     const rotationRemoval = () => {
         // we want to remove the rotation
-        deleteRotation(user, rotation.id)
+        deleteRotation(user, rotation._id)
             // send a success message
             .then(() =>
                 msgAlert({
@@ -88,7 +88,7 @@ const RotationShow = (props) => {
         if (rotation.length > 0) {
             rotationCards = rotation.map(rotation => (
                 <RotationShow 
-                    key={rotation.id}
+                    key={rotation._id}
                     rotation={rotation}
                     msgAlert={msgAlert}
                     triggerRefresh={() => setUpdated(prev => !prev)}
@@ -97,7 +97,7 @@ const RotationShow = (props) => {
                 />
             ))
         } else {
-            rotationCards = <p>No rotations added to your playroom yet.</p>
+            rotationCards = <p>No toys added to your rotation yet.</p>
         }
     }
 
@@ -127,7 +127,7 @@ const RotationShow = (props) => {
                             Add your rotation!
                         </Button> */}
                         {
-                            rotation.owner && user && rotation.owner.id === user.id
+                            rotation.owner && user && rotation.owner._id === user._id
                             ?
                             <>
                                 {/* <Button 

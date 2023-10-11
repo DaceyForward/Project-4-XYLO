@@ -13,6 +13,7 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import ToyShow from './components/toys/ToyShow'
+import RotationShow from './components/rotations/RotationShow'
 
 const App = () => {
 
@@ -84,6 +85,12 @@ const App = () => {
 					path='toys/:id'
 					element={
 						<ToyShow user={user} msgAlert={msgAlert} />
+					}
+				/>
+				<Route 
+					path='rotations/:id'
+					element={
+						<RotationShow user={user} msgAlert={msgAlert} />
 					}
 				/>
 			</Routes>

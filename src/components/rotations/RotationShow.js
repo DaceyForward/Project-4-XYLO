@@ -121,21 +121,21 @@ const RotationShow = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button className="m-2" variant="info"
-                            onClick={() => setRotationModalShow(true)}
+                        <Button className="m-2" variant="info"
+                            // onClick={() => setRotationModalShow(true)}
                         >
                             Add your rotation!
-                        </Button> */}
+                        </Button>
                         {
                             rotation.owner && user && rotation.owner._id === user._id
                             ?
                             <>
-                                {/* <Button 
+                                <Button 
                                     className="m-2" variant="warning"
-                                    onClick={() => setEditModalShow(true)}
+                                    // onClick={() => setEditModalShow(true)}
                                 >
                                     Edit
-                                </Button> */}
+                                </Button>
                                 <Button 
                                     className="m-2" variant="danger"
                                     onClick={() => rotationRemoval()}

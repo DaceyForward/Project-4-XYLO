@@ -119,21 +119,21 @@ const ToyShow = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button className="m-2" variant="info"
-                            onClick={() => setToyModalShow(true)}
+                        <Button className="m-2" variant="info"
+                            // onClick={() => setToyModalShow(true)}
                         >
                             Add your toy!
-                        </Button> */}
+                        </Button>
                         {
                             toy.owner && user && toy.owner._id === user._id
                             ?
                             <>
-                                {/* <Button 
+                                <Button 
                                     className="m-2" variant="warning"
-                                    onClick={() => setEditModalShow(true)}
+                                    // onClick={() => setEditModalShow(true)}
                                 >
                                     Edit
-                                </Button> */}
+                                </Button>
                                 <Button 
                                     className="m-2" variant="danger"
                                     onClick={() => toyRemoval()}

@@ -45,8 +45,8 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
 	<>
 		<Nav.Item className='m-2'>
-			<Link to='/' style={linkStyle}>
-				Home
+			<Link to='/about' style={linkStyle}>
+				About
 			</Link>
 		</Nav.Item>
 	</>
@@ -63,7 +63,7 @@ const Header = ({ user }) => (
 		<Navbar.Collapse id='basic-navbar-nav'>
 			<Nav className='ml-auto'>
 				{user && (
-					<span className='navbar-text mr-2'>Welcome, {user.email}</span>
+					<span className='navbar-text mr-2'>Welcome, {user.firstName}</span>
 				)}
 				{alwaysOptions}
 				{user ? authenticatedOptions : unauthenticatedOptions}

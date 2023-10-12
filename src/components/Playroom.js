@@ -1,6 +1,7 @@
 import RotationsIndex from "./rotations/RotationIndex"
 import ToysIndex from "./toys/ToyIndex"
 import { Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 // import { indexToys } from '../../api/toy'
 
 const Playroom = (props) => {
@@ -13,7 +14,11 @@ const Playroom = (props) => {
             <br/>
             <h4>My Toy Rotations</h4>
 			<RotationsIndex msgAlert={msgAlert} />
+			<Link to='/create-rotation' className='newToy btn btn-info'>
+				Add A New Rotation
+			</Link>
             <br/>
+			<br />
             <h4>My Toy Box</h4>
             {/* { toys.owner ?  */}
                     {/* // <p>{ toyCards }</p>

@@ -54,7 +54,7 @@ const ToysIndex = (props) => {
 
 
     const toyCards = toys.map(toy => (
-        <Card className='toyCards' key={ toy._id } style={{ width: '30%', margin: 5 }}>
+        <Card className='toyCards shadow p-3 mb-5 bg-body-tertiary rounded"' key={ toy._id } style={{ width: '30%', margin: 5 }}>
             <Card.Header className='toyCardHeader'>{ toy.name }</Card.Header>
             <Card.Body className='toyCards'>
                 <Card.Text className='toyCards'>

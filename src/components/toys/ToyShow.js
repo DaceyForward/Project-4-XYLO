@@ -158,6 +158,7 @@ const ToyShow = (props) => {
                 handleClose={() => setEditModalShow(false)}
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 toy={toy}
+                className='modalColor'
             />
             {/* <NewToyModal 
                 toy={toy}

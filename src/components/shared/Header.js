@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 const linkStyle = {
     color: 'white',
     textDecoration: 'none',
-	background: 'rgb(135, 201, 236)'
+	background: 'rgb(135, 201, 236)',
+	margin: '10px'
 }
 const authenticatedOptions = (
 	<>
@@ -73,7 +74,7 @@ const Header = ({ user }) => (
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
-		<Navbar.Collapse id='basic-navbar-nav'>
+		<Navbar.Collapse className='justify-content-end' id='basic-navbar-nav'>
 			<Nav className='ml-auto'>
 				{user && (
 					<span className='navbar-text mr-2'>Welcome, {user.firstName}</span>

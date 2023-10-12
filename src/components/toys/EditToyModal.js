@@ -8,6 +8,17 @@ import ToyForm from '../shared/ToyForm'
 import { updateToySuccess, updateToyFailure} from '../shared/AutoDismissAlert/messages'
 import { updateToy } from '../../api/toy'
 
+// import {
+//     MDBBtn,
+//     MDBModal,
+//     MDBModalDialog,
+//     MDBModalContent,
+//     MDBModalHeader,
+//     MDBModalTitle,
+//     MDBModalBody,
+//     MDBModalFooter,
+//   } from 'mdb-react-ui-kit';
+
 // this modal has its own props that it needs in order to open and close
 // since we will be using the ToyForm as well, we'll need those props
 
@@ -69,18 +80,45 @@ const EditToyModal = (props) => {
             })
     }
 
+    // const [basicModal, setBasicModal] = useState(false);
+
+    // const toggleShow = () => setBasicModal(!basicModal);
+
     return (
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton />
-            <Modal.Body>
+        <Modal className='modalColor' show={show} onHide={handleClose} >
+            <Modal.Header className='modalColor' closeButton />
+            <Modal.Body className='modalColor'>
                 <ToyForm 
                     toy={toy}
                     handleChange={onChange}
                     handleSubmit={onSubmit}
                     heading="Update Toy"
+                    className='modalColor'
                 />
             </Modal.Body>
         </Modal>
+
+    //     <>
+    //     <MDBBtn onClick={toggleShow}>LAUNCH DEMO MODAL</MDBBtn>
+    //     <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+    //       <MDBModalDialog>
+    //         <MDBModalContent>
+    //           <MDBModalHeader>
+    //             <MDBModalTitle>Modal title</MDBModalTitle>
+    //             <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+    //           </MDBModalHeader>
+    //           <MDBModalBody>...</MDBModalBody>
+  
+    //           <MDBModalFooter>
+    //             <MDBBtn color='secondary' onClick={toggleShow}>
+    //               Close
+    //             </MDBBtn>
+    //             <MDBBtn>Save changes</MDBBtn>
+    //           </MDBModalFooter>
+    //         </MDBModalContent>
+    //       </MDBModalDialog>
+    //     </MDBModal>
+    //   </>
     )
 }
 

@@ -52,7 +52,7 @@ const RotationsIndex = (props) => {
     console.log('the rotations in RotationIndex', rotations)
 
     const rotationCards = rotations.map(rotation => (
-        <Card className='rotationCards' key={ rotation._id } style={{ width: '30%', margin: 5 }}>
+        <Card className='rotationCards shadow p-3 mb-5 bg-body-tertiary rounded"' key={ rotation._id } style={{ width: '30%', margin: 5 }}>
             <Card.Header className='rotationCardsHeader'>{ rotation.name }</Card.Header>
             <Card.Body className='rotationCards'>
                 <Card.Text className='rotationCards'>

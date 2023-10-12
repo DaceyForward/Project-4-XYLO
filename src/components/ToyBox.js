@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 // import ToyCreate from './components/toys/ToyCreate'
 // import { createToys } from '../../api/toy'
-import SearchBar from './components/SearchBar'
+import SearchBar from './SearchBar'
 
 const ToyBox = (props) => {
 	const { msgAlert, user } = props
@@ -19,6 +19,7 @@ const ToyBox = (props) => {
 			<div classname='App'>
         		<SearchBar />
       		</div>
+			<br />
 			<Link to='/create-toy' className='newToy btn btn-info'>
 				Add A New Toy
 			</Link>

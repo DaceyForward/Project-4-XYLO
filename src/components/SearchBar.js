@@ -25,7 +25,7 @@ const SearchBar = (toys, toy) => {
             onChange={handleChange}
             value={searchInput} />
 
-            </div>
+        </div>
 
     )
 };

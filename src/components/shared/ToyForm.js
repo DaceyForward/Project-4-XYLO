@@ -5,7 +5,7 @@ import { Form, Button, Container } from 'react-bootstrap'
 
 import React, { useState } from "react";
 
-// import Upload from './components/Upload'
+import Upload from '../Upload'
 
 const ToyForm = (props) => {
     // we need several props for a working, reusable form
@@ -13,11 +13,11 @@ const ToyForm = (props) => {
     // sometimes it's nice to have a custom heading (to diff b/w our components)
     const { toy, handleChange, handleSubmit, heading } = props
 
-    const [file, setFile] = useState();
-    function handleChanges(e) {
-        console.log(e.target.files);
-        setFile(URL.createObjectURL(e.target.files[0]));
-    }
+    // const [file, setFile] = useState();
+    // function handleChanges(e) {
+    //     console.log(e.target.files);
+    //     setFile(URL.createObjectURL(e.target.files[0]));
+    // }
 
     return (
         <Container className="justify-content-center">
@@ -63,12 +63,12 @@ const ToyForm = (props) => {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                {/* <Upload /> */}
-                <div className="App">
+                <Upload />
+                {/* <div className="App">
                     <h2>Add Image:</h2>
                     <input type="file" onChange={handleChanges} />
                     <img src={file} />
-                </div>
+                </div> */}
                 {/* <Form.Group>
                     <Form.File label="Select an image for your toy" />
                 </Form.Group> */}

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import LoadingScreen from '../shared/LoadingScreen'
 import { indexToys } from '../../api/toy'
 import messages from '../shared/AutoDismissAlert/messages'
+// import SearchBar from './components/SearchBar'
 
 const cardContainerLayout = {
     display: 'flex',
@@ -54,6 +55,10 @@ const ToysIndex = (props) => {
 
 
     const toyCards = toys.map(toy => (
+    <>
+       {/* <div classname='App'>
+        <SearchBar/>
+      </div> */}
         <Card className='toyCards shadow p-3 mb-5 bg-body-tertiary rounded"' key={ toy._id } style={{ width: '30%', margin: 5 }}>
             <Card.Header className='toyCardHeader'>{ toy.name }</Card.Header>
             <Card.Body className='toyCards'>
@@ -67,6 +72,7 @@ const ToysIndex = (props) => {
                 : null } */}
             </Card.Body>
         </Card>
+        </>
     ))
 
     return (

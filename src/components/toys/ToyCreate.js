@@ -21,9 +21,9 @@ const ToyCreate = (props) => {
 
     const [toy, setToy] = useState({
         name: '',
-        type: '',
-        age: '',
-        adoptable: false
+        level: '',
+        focusArea: '',
+        type: ''
     })
 
     const onChange = (e) => {
@@ -43,11 +43,7 @@ const ToyCreate = (props) => {
 
             // to handle our checkbox, we need to tell it when to send a true, and when to send a false. we can target it by the unique name(adoptable) and handle it the way checkboxes are meant to be handled.
             // a checkbox only sends the value 'checked' not the boolean we need
-            if (updatedName === 'adoptable' && e.target.checked) {
-                updatedValue = true
-            } else if (updatedName === 'adoptable' && !e.target.checked) {
-                updatedValue = false
-            }
+
             
             // build the toy object, grab the attribute name from the field and assign it the respective value.
             const updatedToy = { [updatedName] : updatedValue }

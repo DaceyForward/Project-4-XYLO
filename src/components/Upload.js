@@ -25,9 +25,9 @@ function Upload() {
       const ReactS3Client = new S3(config);
 
       console.log('this is reacts3client', ReactS3Client)
-      
+
       ReactS3Client.uploadFile(file, newFileName).then((data) => {
-          console.log(data);
+          console.log('this is data', data);
           if (data.status === 204) {
             console.log("success");
           } else {

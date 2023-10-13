@@ -43,6 +43,7 @@ const ToysIndex = (props) => {
     useEffect(() => {
         if (toys && searchInput) {
             console.log('filtered toys', toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+            // return (toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
             return setDisplayToys(displayToys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
         }
         else if (searchInput === '') {
@@ -67,13 +68,14 @@ const ToysIndex = (props) => {
     }
 
     // if the toys aren't even loaded yet
-    if (!toys) {
+    if (!displayToys) {
         return <LoadingScreen />
     // if we have NO toys
-    } else if (toys.length === 0) {
+    } else if (displayToys.length === 0) {
         return <p>Add Some Toys!</p>
     }
     console.log('the toys in ToyIndex', toys)
+    console.log('the displayToys', displayToys)
 
 
 

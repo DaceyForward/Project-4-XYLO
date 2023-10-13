@@ -80,7 +80,7 @@ const App = () => {
 					element={<ToyBox msgAlert={msgAlert} user={user} />} 
 				/>
 				<Route 
-					path='/rotations' 
+					path='/toys/mine' 
 					element={<Playroom msgAlert={msgAlert} user={user} />} 
 				/>
 				<Route

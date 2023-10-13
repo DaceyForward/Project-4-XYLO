@@ -29,7 +29,7 @@ const Playroom = (props) => {
                     // <Card.Footer >owner: {toy.owner.firstName}</Card.Footer> */}
 			     {/* <ToysIndex msgAlert={msgAlert} /> */}
             {/* // : null } */}
-			<div>
+			{/* <div>
 			{
 				toy.owner && user && toy.owner._id === user._id
 				?
@@ -39,7 +39,11 @@ const Playroom = (props) => {
 				:
 				null
 			}
-			</div>
+			</div> */}
+			<br />
+			<Link to='/create-toy' className='newToy btn btn-info'>
+				Add A New Toy
+			</Link>
 		</Container>
 	)
 }

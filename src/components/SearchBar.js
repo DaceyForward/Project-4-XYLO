@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 // import { toyCards } from './components/toys/ToyIndex'
 
 const SearchBar = (props) => {
-    const { toys } = props
-    console.log('these are the toys', toys)
-    const [searchInput, setSearchInput] = useState("");
+    const { toys, searchInput, setSearchInput, filterText } = props
+    // console.log('these are the toys', toys)
+
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -19,9 +19,9 @@ const SearchBar = (props) => {
     // }
 
     //from the mdn docs about filter method..
-    function filterToys(toys, query) {
-        return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()));
-      }
+    // function filterToys(toys, query) {
+    //     return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()));
+    //   }
 
     //   const filterToys((toys, query) => {
     //         return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()))

@@ -16,7 +16,8 @@ const cardContainerLayout = {
 const ToysIndex = (props) => {
     const [toys, setToys] = useState(null)
     const [error, setError] = useState(false)
-
+    const [searchInput, setSearchInput] = useState('');
+    // const [filterText, setFilterText] = useState('');
     const { msgAlert } = props
 
     // useEffect takes two arguments
@@ -36,7 +37,31 @@ const ToysIndex = (props) => {
                 })
                 setError(true)
             })
-    }, [msgAlert])
+    }, [])
+
+    useEffect(() => {
+        // let filteredToys = setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+        // let searchToys = .....????
+        if (toys && searchInput) {
+            console.log(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+            // return filteredToys
+            return setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+        }
+        // else if (searchInput === '') {
+        //     return toys;
+        // }
+        
+    }, [searchInput])
+
+
+    // useEffect(() => {
+    //     filterToys(toys && searchInput)
+    //         .then(res => {
+    //             setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+    //         })
+    //         .then
+  
+    //     }, [searchInput])
 
     // we need to account for multiple potential states of our data
     // if we have an error
@@ -90,7 +115,12 @@ const ToysIndex = (props) => {
         <Container className='m-2' style={{ textAlign: 'center' }}>
             <h1>Xylo Toy Box</h1>
             <div classname='search'>
-                <SearchBar />
+                <SearchBar 
+                    searchInput={searchInput} 
+                    setSearchInput={setSearchInput} 
+                    // filterText={filterText}
+                    // handleChange={setFilterText}/>
+                    />
             </div>
             <br />
             <Link to='/create-toy' className='newToy btn btn-info'>
@@ -101,6 +131,10 @@ const ToysIndex = (props) => {
             <div className="container-md" style={ cardContainerLayout }>
                 { toyCards }
             </div>
+            {/* <div>
+                {filteredToys.map((toy) => (
+                    key={toy.name}))}
+            </div> */}
         </Container>
     )
 }

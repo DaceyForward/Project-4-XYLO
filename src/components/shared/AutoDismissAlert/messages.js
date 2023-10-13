@@ -7,6 +7,8 @@ const messages = {
 	changePasswordSuccess: 'Password changed successfully!',
 	changePasswordFailure:'Failed to change passwords. Check your old password and try again.',
 
+	photoUploadSuccess: 'Toy photo was uploaded successfully!',
+
 	indexToysSuccess: 'Here is an inventory of all the toys.',
 	indexToysFailure: 'Oh no! Something went wrong, please try again',
 	detailToySuccess: 'Here are some details about that toy!',

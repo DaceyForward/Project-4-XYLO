@@ -29,7 +29,11 @@ const ToysIndex = (props) => {
             .then(res => {
                 // console.log('the toys?', res.data.toys)
                 setToys(res.data.toys)
+                // setDisplayToys(res.data.toys)
             })
+            // .then(() => {
+            //     setDisplayToys(toys)
+            // })
             .catch(err => {
                 msgAlert({
                     heading: 'Error getting Toys',
@@ -49,7 +53,7 @@ const ToysIndex = (props) => {
         else if (searchInput === '') {
             return setDisplayToys(toys);
         }
-    }, [searchInput])
+    }, [searchInput, toys])
 
 
     // useEffect(() => {
@@ -60,7 +64,8 @@ const ToysIndex = (props) => {
     //         .then
   
     //     }, [searchInput])
-
+    console.log('the toys in ToyIndex', toys)
+    console.log('the displayToys', displayToys)
     // we need to account for multiple potential states of our data
     // if we have an error
     if (error) {

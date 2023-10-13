@@ -38,7 +38,7 @@ const ToyShow = (props) => {
     // to retrieve our id, we can use something from react-router-dom called useParams
     // this is called id, because that's how it is declared in our Route component in App.js
     const { id } = useParams()
-    const { user, msgAlert } = props
+    const { user, msgAlert, file, setFile, handleFileChange } = props
 
     // useEffect takes two arguments
     // the callback function
@@ -151,7 +151,14 @@ const ToyShow = (props) => {
             <Container className='m-2' style={toyCardContainerLayout}>
                 {toyCards}
             </Container>
-            <Upload />
+            <Upload 
+                // file={file} 
+                // setFile={setFile} 
+                // onChange={handleFileChange}
+                // <Image src="holder.js/171x180" thumbnail />
+                // imgSrc="https://xylo-toy-box-app.s3.amazonaws.com/6.png" 
+                />
+         
             <EditToyModal 
                 user={user}
                 show={editModalShow}

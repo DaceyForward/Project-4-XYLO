@@ -18,6 +18,7 @@ const ToysIndex = (props) => {
     const [error, setError] = useState(false)
     const [searchInput, setSearchInput] = useState('');
     // const [filterText, setFilterText] = useState('');
+    const [displayToys, setDisplayToys] = useState(toys)
     const { msgAlert } = props
 
     // useEffect takes two arguments
@@ -47,9 +48,9 @@ const ToysIndex = (props) => {
             // return filteredToys
             return setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
         }
-        // else if (searchInput === '') {
-        //     return toys;
-        // }
+        else if (searchInput === '') {
+            return setDisplayToys(toys);
+        }
         
     }, [searchInput])
 
@@ -118,6 +119,8 @@ const ToysIndex = (props) => {
                 <SearchBar 
                     searchInput={searchInput} 
                     setSearchInput={setSearchInput} 
+                    displayToys={displayToys}
+                    setDisplayToys={setDisplayToys}
                     // filterText={filterText}
                     // handleChange={setFilterText}/>
                     />

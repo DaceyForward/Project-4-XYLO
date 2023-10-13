@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 // import { toyCards } from './components/toys/ToyIndex'
 
 const SearchBar = (props) => {
-    const { toys, searchInput, setSearchInput, filterText } = props
+    const { toys, searchInput, setSearchInput, displayToys, setDisplayToys } = props
     // console.log('these are the toys', toys)
 
 
@@ -37,6 +37,8 @@ const SearchBar = (props) => {
             onChange={handleChange}
             value={searchInput} 
             // {filterToys}
+            // displayToys={displayToys}
+            // setDisplayToys={setDisplayToys}
             />
 
         </div>

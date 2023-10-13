@@ -9,7 +9,7 @@ import Header from './components/shared/Header'
 import RequireAuth from './components/shared/RequireAuth'
 import Home from './components/Home'
 import About from './components/About'
-import ToyBox from './components/ToyBox'
+import ToyIndex from './components/toys/ToyIndex'
 import Playroom from './components/Playroom'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
@@ -77,7 +77,7 @@ const App = () => {
 				/>
 				<Route 
 					path='/toys' 
-					element={<ToyBox msgAlert={msgAlert} user={user} />} 
+					element={<ToyIndex msgAlert={msgAlert} user={user} />} 
 				/>
 				<Route 
 					path='/rotations' 

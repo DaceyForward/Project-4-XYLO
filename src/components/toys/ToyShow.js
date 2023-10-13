@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import LoadingScreen from '../shared/LoadingScreen'
 import EditToyModal from './EditToyModal'
+import Upload from '../Upload'
 // import NewToyModal from '../toys/NewToyModal'
 // import ToyShow from '../toys/ToyShow'
 import { useNavigate } from 'react-router-dom'
@@ -58,7 +59,7 @@ const ToyShow = (props) => {
                     variant: 'danger'
                 })
             })
-    }, [id, msgAlert, updated])
+    }, [updated])
 
     const toyRemoval = () => {
         // we want to remove the toy
@@ -72,7 +73,7 @@ const ToyShow = (props) => {
                 })
             )
             // navigate the user to the home page(index)
-            .then(() => navigate('/'))
+            .then(() => navigate('/toys'))
             // send a fail message if there is an error
             .catch(() =>
                 msgAlert({
@@ -150,6 +151,7 @@ const ToyShow = (props) => {
             <Container className='m-2' style={toyCardContainerLayout}>
                 {toyCards}
             </Container>
+            <Upload />
             <EditToyModal 
                 user={user}
                 show={editModalShow}

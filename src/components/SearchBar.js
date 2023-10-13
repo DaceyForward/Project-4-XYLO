@@ -1,20 +1,32 @@
 import React, {useState} from 'react'
+// import { toyCards } from './components/toys/ToyIndex'
 
-
-const SearchBar = (toys, toy) => {
-
- const [searchInput, setSearchInput] = useState("");
+const SearchBar = (props) => {
+    const { toys } = props
+    console.log('these are the toys', toys)
+    const [searchInput, setSearchInput] = useState("");
 
     const handleChange = (e) => {
-    e.preventDefault();
-    setSearchInput(e.target.value);
+        e.preventDefault();
+        setSearchInput(e.target.value);
     };
 
-    if (searchInput.length > 0) {
-        toys.name.filter((toy) => {
-        return toy.name.match(searchInput);
-    });
-    }
+    // if (searchInput.length > 0) {
+    //     toys.filter((toy) => {
+    //     return toy.name.match(searchInput);
+  
+    // });
+    // }
+
+    //from the mdn docs about filter method..
+    function filterToys(toys, query) {
+        return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()));
+      }
+
+    //   const filterToys((toys, query) => {
+    //         return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()))
+    //   })
+      
 
     return (
         <div>
@@ -23,7 +35,9 @@ const SearchBar = (toys, toy) => {
             type="search"
             placeholder="Search here"
             onChange={handleChange}
-            value={searchInput} />
+            value={searchInput} 
+            // {filterToys}
+            />
 
         </div>
 

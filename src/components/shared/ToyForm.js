@@ -5,7 +5,7 @@ import { Form, Button, Container } from 'react-bootstrap'
 
 import React, { useState } from "react";
 
-import Upload from '../Upload'
+// import Upload from '../Upload'
 
 const ToyForm = (props) => {
     // we need several props for a working, reusable form
@@ -63,7 +63,7 @@ const ToyForm = (props) => {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Upload />
+                {/* <Upload /> */}
                 {/* <div className="App">
                     <h2>Add Image:</h2>
                     <input type="file" onChange={handleChanges} />

@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import LoadingScreen from '../shared/LoadingScreen'
 import { indexToys } from '../../api/toy'
 import messages from '../shared/AutoDismissAlert/messages'
-// import SearchBar from './components/SearchBar'
+import SearchBar from '../SearchBar'
+import { Container } from 'react-bootstrap'
 
 const cardContainerLayout = {
     display: 'flex',
@@ -56,9 +57,18 @@ const ToysIndex = (props) => {
 
     const toyCards = toys.map(toy => (
     <>
-       {/* <div classname='App'>
-        <SearchBar/>
-      </div> */}
+        {/* <Container className='m-2' style={{ textAlign: 'center' }}>
+		    <h1>Xylo Toy Box</h1>
+            <div classname='App'>
+        		<SearchBar />
+      		</div>
+            <br />
+            <br />
+			<Link to='/create-toy' className='newToy btn btn-info'>
+				Add A New Toy
+			</Link>
+			<br />
+			<br /> */}
         <Card className='toyCards shadow p-3 mb-5 bg-body-tertiary rounded"' key={ toy._id } style={{ width: '30%', margin: 5 }}>
             <Card.Header className='toyCardHeader'>{ toy.name }</Card.Header>
             <Card.Body className='toyCards'>
@@ -72,13 +82,26 @@ const ToysIndex = (props) => {
                 : null } */}
             </Card.Body>
         </Card>
-        </>
+        {/* </Container> */}
+    </>
     ))
 
     return (
-        <div className="container-md" style={ cardContainerLayout }>
-            { toyCards }
-        </div>
+        <Container className='m-2' style={{ textAlign: 'center' }}>
+            <h1>Xylo Toy Box</h1>
+            <div classname='search'>
+                <SearchBar />
+            </div>
+            <br />
+            <Link to='/create-toy' className='newToy btn btn-info'>
+                Add A New Toy
+            </Link>
+            <br />
+            <br />
+            <div className="container-md" style={ cardContainerLayout }>
+                { toyCards }
+            </div>
+        </Container>
     )
 }
 

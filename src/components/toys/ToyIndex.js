@@ -41,17 +41,13 @@ const ToysIndex = (props) => {
     }, [])
 
     useEffect(() => {
-        // let filteredToys = setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
-        // let searchToys = .....????
         if (toys && searchInput) {
             console.log('filtered toys', toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
-            // return filteredToys
             return setDisplayToys(displayToys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
         }
         else if (searchInput === '') {
-            return setToys(toys);
+            return setDisplayToys(toys);
         }
-        
     }, [searchInput])
 
 
@@ -81,20 +77,8 @@ const ToysIndex = (props) => {
 
 
 
-    const toyCards = toys.map(toy => (
+    const toyCards = displayToys.map(toy => (
     <>
-        {/* <Container className='m-2' style={{ textAlign: 'center' }}>
-		    <h1>Xylo Toy Box</h1>
-            <div classname='App'>
-        		<SearchBar />
-      		</div>
-            <br />
-            <br />
-			<Link to='/create-toy' className='newToy btn btn-info'>
-				Add A New Toy
-			</Link>
-			<br />
-			<br /> */}
         <Card className='toyCards shadow p-3 mb-5 bg-body-tertiary rounded"' key={ toy._id } style={{ width: '30%', margin: 5 }}>
             <Card.Header className='toyCardHeader'>{ toy.name }</Card.Header>
             <Card.Body className='toyCards'>
@@ -108,7 +92,6 @@ const ToysIndex = (props) => {
                 : null } */}
             </Card.Body>
         </Card>
-        {/* </Container> */}
     </>
     ))
 

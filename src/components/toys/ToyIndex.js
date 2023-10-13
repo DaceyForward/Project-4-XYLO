@@ -44,12 +44,12 @@ const ToysIndex = (props) => {
         // let filteredToys = setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
         // let searchToys = .....????
         if (toys && searchInput) {
-            console.log(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+            console.log('filtered toys', toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
             // return filteredToys
-            return setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
+            return setDisplayToys(displayToys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
         }
         else if (searchInput === '') {
-            return setDisplayToys(toys);
+            return setToys(toys);
         }
         
     }, [searchInput])

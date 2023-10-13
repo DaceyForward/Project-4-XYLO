@@ -15,10 +15,10 @@ const ToyBox = (props) => {
 			{/* <Link to={'/toys'} className='info btn btn-info'>
                 Sign Up Here!
             </Link> */}
-			<Link to='/create-toy' className='newToy btn btn-info'>
+			{/* <Link to='/create-toy' className='newToy btn btn-info'>
 				Add A New Toy
-			</Link>
-			<br />
+			</Link> */}
+			{/* <br /> */}
 			<br />
 			<ToysIndex msgAlert={msgAlert} />
 		</Container>

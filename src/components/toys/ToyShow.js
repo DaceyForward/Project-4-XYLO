@@ -58,7 +58,7 @@ const ToyShow = (props) => {
                     variant: 'danger'
                 })
             })
-    }, [id, msgAlert, updated])
+    }, [updated])
 
     const toyRemoval = () => {
         // we want to remove the toy
@@ -72,7 +72,7 @@ const ToyShow = (props) => {
                 })
             )
             // navigate the user to the home page(index)
-            .then(() => navigate('/'))
+            .then(() => navigate('/toys'))
             // send a fail message if there is an error
             .catch(() =>
                 msgAlert({

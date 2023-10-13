@@ -85,7 +85,7 @@ const EditToyModal = (props) => {
     // const toggleShow = () => setBasicModal(!basicModal);
 
     return (
-        <Modal className='modalColor' show={show} onHide={handleClose} >
+        <Modal show={show} onHide={handleClose} >
             <Modal.Header className='modalColor' closeButton />
             <Modal.Body className='modalColor'>
                 <ToyForm 

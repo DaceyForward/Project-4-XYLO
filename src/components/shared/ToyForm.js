@@ -53,7 +53,7 @@ const ToyForm = (props) => {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Button className="m-2" type="submit">Submit</Button>
+                <Button className="newToy m-2" type="submit">Submit</Button>
             </Form>
         </Container>
     )

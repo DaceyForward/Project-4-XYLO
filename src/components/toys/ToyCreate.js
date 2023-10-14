@@ -41,6 +41,12 @@ const ToyCreate = (props) => {
                 updatedValue = parseInt(e.target.value)
             }
 
+
+            // to handle our checkbox, we need to tell it when to send a true, and when to send a false. we can target it by the unique name(adoptable) and handle it the way checkboxes are meant to be handled.
+            // a checkbox only sends the value 'checked' not the boolean we need
+
+            
+
             // build the toy object, grab the attribute name from the field and assign it the respective value.
             const updatedToy = { [updatedName] : updatedValue }
 

@@ -1,49 +1,49 @@
-// import React, {useState} from 'react'
-// // import { toyCards } from './components/toys/ToyIndex'
+import React, {useState} from 'react'
+// import { toyCards } from './components/toys/ToyIndex'
 
-// const SearchBar = (props) => {
-//     const { toys, searchInput, setSearchInput, displayToys, setDisplayToys } = props
-//     // console.log('these are the toys', toys)
+const SearchBar = (props) => {
+    const { toys, searchInput, setSearchInput, displayToys, setDisplayToys } = props
+    // console.log('these are the toys', toys)
 
 
-//     const handleChange = (e) => {
-//         e.preventDefault();
-//         setSearchInput(e.target.value);
-//     };
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+    };
 
-//     // if (searchInput.length > 0) {
-//     //     toys.filter((toy) => {
-//     //     return toy.name.match(searchInput);
+    // if (searchInput.length > 0) {
+    //     toys.filter((toy) => {
+    //     return toy.name.match(searchInput);
   
-//     // });
-//     // }
+    // });
+    // }
 
-//     //from the mdn docs about filter method..
-//     // function filterToys(toys, query) {
-//     //     return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()));
-//     //   }
+    //from the mdn docs about filter method..
+    // function filterToys(toys, query) {
+    //     return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()));
+    //   }
 
-//     //   const filterToys((toys, query) => {
-//     //         return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()))
-//     //   })
+    //   const filterToys((toys, query) => {
+    //         return toys.filter((toy) => toy.toLowerCase().includes(query.toLowerCase()))
+    //   })
       
 
-//     return (
-//         <div>
+    return (
+        <div>
 
-//             <input
-//             type="search"
-//             placeholder="Search here"
-//             onChange={handleChange}
-//             value={searchInput} 
-//             // {filterToys}
-//             // displayToys={displayToys}
-//             // setDisplayToys={setDisplayToys}
-//             />
+            <input
+            type="search"
+            placeholder="Search here"
+            onChange={handleChange}
+            value={searchInput} 
+            // {filterToys}
+            // displayToys={displayToys}
+            // setDisplayToys={setDisplayToys}
+            />
 
-//         </div>
+        </div>
 
-//     )
-// };
+    )
+};
 
-// export default SearchBar;
+export default SearchBar;

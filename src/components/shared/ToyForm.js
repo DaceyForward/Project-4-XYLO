@@ -63,6 +63,7 @@ const ToyForm = (props) => {
                         onChange={handleChange}
                     />
                 </Form.Group>
+
                 {/* <Upload /> */}
                 {/* <div className="App">
                     <h2>Add Image:</h2>
@@ -74,6 +75,9 @@ const ToyForm = (props) => {
                 </Form.Group> */}
                 <br />
                 <Button className="addButton m-2" type="submit">Add Toy</Button>
+
+//                 <Button className="newToy m-2" type="submit">Submit</Button>
+
             </Form>
         </Container>
     )

@@ -18,7 +18,7 @@ const authenticatedOptions = (
 			</Link>
 		</Nav.Item>
 		<Nav.Item className='m-2'>
-			<Link to='/rotations' style={linkStyle}>
+			<Link to='/toys/mine' style={linkStyle}>
 				Playroom
 			</Link>
 		</Nav.Item>

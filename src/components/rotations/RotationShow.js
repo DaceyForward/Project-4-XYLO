@@ -116,8 +116,8 @@ const RotationShow = (props) => {
                             <small>Description: {rotation.desc}</small><br/>
                             <small>Theme: {rotation.theme}</small><br/>
                             <small>Toys: {rotation.toys}</small><br/>
-                            <small>Start Date: {rotation.start}</small><br/>
-                            <small>End Date: {rotation.end}</small><br/>
+                            <small>Start Date: {new Date(rotation.start).toLocaleDateString()}</small><br/>
+                            <small>End Date: {new Date(rotation.end).toLocaleDateString()}</small><br/>
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>

@@ -103,10 +103,18 @@ h4 {
   font-size: 1.7vmin !important;
 }
 
+.toyButton:hover {
+  background-color: rgb(143, 201, 232) !important;
+}
+
 .rotButton {
   background-color: rgb(248, 239, 201) !important;
   border: none !important;
   font-size: 1.7vmin !important;
+}
+
+.rotButton:hover {
+  background-color: rgb(243, 224, 139) !important;
 }
 
 .modalColor {
@@ -114,11 +122,16 @@ h4 {
 }
 
 .info {
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
   border: none !important;
   font-size: 4vmin !important;
   margin: 2vmin !important;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.info:hover {
+  background-color: rgb(135, 201, 236) !important;
+  color: white !important;
 }
 
 .rowPhotos {
@@ -141,4 +154,20 @@ h4 {
   border: none !important;
   font-size: 2.5vmin !important;
   font-weight: bold !important;
+
+}
+
+.newToy:hover {
+  background-color: rgb(239, 164, 164) !important;
+}
+
+.authButtons {
+  background-color: rgb(248, 185, 185) !important;
+  border: none !important;
+  font-size: 2.5vmin !important;
+  font-weight: bold !important;
+}
+
+.authButtons:hover {
+  background-color: rgb(239, 164, 164) !important;
 }

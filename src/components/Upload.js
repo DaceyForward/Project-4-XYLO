@@ -124,15 +124,22 @@ function App() {
  
 
   return (
-    <div className="App m-5">
+    <div className="App">
       <div>
-        <input type="file" onChange={handleFileChange} />
+        {/* <input type="file" onChange={handleFileChange} />
         <br />
         <br/>
         <button onClick={uploadFile}>Upload</button>
         <br />
         <br />
+        <Image src={serverPhoto} thumbnail /> */}
+
+        <input className="upload" type="file" onChange={handleFileChange} />
+        <br />
+        <button className="upload" onClick={uploadFile}>Upload</button>
+        <br />
         <Image src={serverPhoto} thumbnail />
+
       </div>
     </div>
   );

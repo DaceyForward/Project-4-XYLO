@@ -171,3 +171,11 @@ h4 {
 .authButtons:hover {
   background-color: rgb(239, 164, 164) !important;
 }
+
+.upload {
+  font-size: 1.5vmin !important;
+}
+
+.searchBar {
+  font-size: 3vmin !important;
+}

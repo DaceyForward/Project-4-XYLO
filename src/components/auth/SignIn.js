@@ -79,7 +79,7 @@ const SignIn = (props) => {
                     </Form.Group>
                     <br />
 
-//                     <Button className='addButton' variant='primary' type='submit'>
+{/* //                     <Button className='addButton' variant='primary' type='submit'> */}
 
                     <Button className='authButtons' variant='primary' type='submit'>
 

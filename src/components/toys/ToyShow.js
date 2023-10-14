@@ -141,6 +141,7 @@ const ToyShow = (props) => {
                                 >
                                     Delete
                                 </Button>
+                                <Upload  />
                             </>
                             :
                             null
@@ -151,13 +152,13 @@ const ToyShow = (props) => {
             <Container className='m-2' style={toyCardContainerLayout}>
                 {toyCards}
             </Container>
-            <Upload 
-                // file={file} 
+            {/* <Upload  /> */}
+                {/* // file={file} 
                 // setFile={setFile} 
                 // onChange={handleFileChange}
                 // <Image src="holder.js/171x180" thumbnail />
-                // imgSrc="https://xylo-toy-box-app.s3.amazonaws.com/6.png" 
-                />
+                // imgSrc="https://xylo-toy-box-app.s3.amazonaws.com/6.png"  */}
+               
          
             <EditToyModal 
                 user={user}

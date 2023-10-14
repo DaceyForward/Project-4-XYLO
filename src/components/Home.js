@@ -7,6 +7,12 @@ const Home = (props) => {
 	const { msgAlert, user } = props
 	// console.log('props in home', props)
 
+	const authenticatedOptions = (
+		<Link to={'/sign-up'} className='info btn btn-info'>
+			Sign Up Here!
+		</Link>
+	)
+
 	return (
 		<Container className='m-2' style={{ textAlign: 'center' }}>
 			<h1>Welcome to Xylo</h1>
@@ -29,9 +35,13 @@ const Home = (props) => {
             </Link>
 			{/* <br />
 			<br /> */}
-			<Link to={'/sign-up'} className='info btn btn-info'>
+
+			{user ? null : authenticatedOptions}
+
+			{/* <Link to={'/sign-up'} className='info btn btn-info'>
                 Sign Up Here!
-            </Link>
+            </Link> */}
+
 		</Container>
 	)
 }

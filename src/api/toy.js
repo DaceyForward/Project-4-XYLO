@@ -11,6 +11,11 @@ export const detailToy = (id) => {
     return axios(`${apiUrl}/toys/${id}`)
 }
 
+// READ -> Show/detail page
+export const detailMineToy = () => {
+    return axios(`${apiUrl}/toys/mine`)
+}
+
 // CREATE -> Add Toy
 export const createToy = (user, newToy) => {
     return axios({

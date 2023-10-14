@@ -126,9 +126,9 @@ const RotationShow = (props) => {
                         >
                             Add your rotation!
                         </Button> */}
-                        {
+                        {/* {
                             rotation.owner && user && rotation.owner._id === user._id
-                            ?
+                            ? */}
                             <>
                                 <Button 
                                     className="m-2" variant="warning"
@@ -143,9 +143,9 @@ const RotationShow = (props) => {
                                     Delete
                                 </Button>
                             </>
-                            :
-                            null
-                        }
+                        {/* //     :
+                        //     null
+                        // } */}
                     </Card.Footer>
                 </Card>
             </Container>

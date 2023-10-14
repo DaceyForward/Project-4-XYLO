@@ -76,7 +76,7 @@ const ToyForm = (props) => {
                 <br />
                 <Button className="addButton m-2" type="submit">Add Toy</Button>
 
-//                 <Button className="newToy m-2" type="submit">Submit</Button>
+{/* //                 <Button className="newToy m-2" type="submit">Submit</Button> */}
 
             </Form>
         </Container>

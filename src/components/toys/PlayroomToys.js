@@ -104,8 +104,9 @@ const ToysIndex = (props) => {
 
     return (
         <Container className='m-2' style={{ textAlign: 'center' }}>
-            <h1>Xylo Toy Box</h1>
+            {/* <h1>Xylo Toy Box</h1> */}
             <div classname='search'>
+            <br />
                 <SearchBar 
                     searchInput={searchInput} 
                     setSearchInput={setSearchInput} 

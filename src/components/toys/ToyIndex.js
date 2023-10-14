@@ -79,8 +79,8 @@ const ToysIndex = (props) => {
     } else if (displayToys.length === 0) {
         return <p>Add Some Toys!</p>
     }
-    console.log('the toys in ToyIndex', toys)
-    console.log('the displayToys', displayToys)
+    // console.log('the toys in ToyIndex', toys)
+    // console.log('the displayToys', displayToys)
 
 
 

@@ -62,15 +62,9 @@ import Image from 'react-bootstrap/Image';
 function App() {
   // Create state to store file
   const [file, setFile] = useState(null);
+  // const url = 
+  const serverPhoto = 'http://xylo-toy-box-app.s3.amazonaws.com/'
 
-
-  //       const config = {
-//         bucketName: process.env.REACT_APP_S3_BUCKET,
-//       //   dirName: process.env.REACT_APP_DIR_NAME /* optional */,
-//         region: process.env.REACT_APP_REGION,
-//         accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
-//         secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY,
-//       };
 
   // Function to upload file to s3
   const uploadFile = async () => {
@@ -130,11 +124,15 @@ function App() {
  
 
   return (
-    <div className="App">
+    <div className="App m-5">
       <div>
         <input type="file" onChange={handleFileChange} />
-        <Image src="https://xylo-toy-box-app.s3.amazonaws.com/6.png" thumbnail/>
+        <br />
+        <br/>
         <button onClick={uploadFile}>Upload</button>
+        <br />
+        <br />
+        <Image src={serverPhoto} thumbnail />
       </div>
     </div>
   );

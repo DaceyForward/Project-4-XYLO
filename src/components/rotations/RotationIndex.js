@@ -60,9 +60,6 @@ const RotationsIndex = (props) => {
                         Details
                     </Link>
                 </Card.Text>
-                {/* { rotation.owner ? 
-                    <Card.Footer >owner: {rotation.owner.firstName}</Card.Footer>
-                : null } */}
             </Card.Body>
         </Card>
     ))
@@ -74,5 +71,4 @@ const RotationsIndex = (props) => {
     )
 }
 
-// export our component
 export default RotationsIndex

@@ -12,7 +12,7 @@ import { Container, Card, Button } from 'react-bootstrap'
 // we'll need to import an api function to grab an individual toy
 import { detailToy, updateToy, deleteToy } from '../../api/toy'
 
-import { detailToySuccess, detailToyFailure, deleteToySuccess, deleteToyFailure } from '../shared/AutoDismissAlert/messages'
+import { detailToyFailure, deleteToySuccess, deleteToyFailure } from '../shared/AutoDismissAlert/messages'
 
 // we're going to use route parameters to get the id of the toy we're trying to retrieve from the server.
 // then we use that id with our api call function
@@ -94,7 +94,6 @@ const ToyShow = (props) => {
                     msgAlert={msgAlert}
                     triggerRefresh={() => setUpdated(prev => !prev)}
                     user={user}
-                    // toy={toy}
                 />
             ))
         } else {
@@ -120,11 +119,6 @@ const ToyShow = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button className="m-2" variant="info"
-                            // onClick={() => setToyModalShow(true)}
-                        >
-                            Add your toy!
-                        </Button> */}
                         {
                             toy.owner && user && toy.owner._id === user._id
                             ?
@@ -159,7 +153,6 @@ const ToyShow = (props) => {
                 // <Image src="holder.js/171x180" thumbnail />
                 // imgSrc="https://xylo-toy-box-app.s3.amazonaws.com/6.png"  */}
                
-         
             <EditToyModal 
                 user={user}
                 show={editModalShow}
@@ -170,13 +163,6 @@ const ToyShow = (props) => {
                 toy={toy}
                 className='modalColor'
             />
-            {/* <NewToyModal 
-                toy={toy}
-                show={toyModalShow}
-                msgAlert={msgAlert}
-                handleClose={() => setToyModalShow(false)}
-                triggerRefresh={() => setUpdated(prev => !prev)}
-            /> */}
         </>
     )
 }

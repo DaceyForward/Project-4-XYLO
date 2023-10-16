@@ -9,15 +9,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const SignUp = (props) => {
-	// constructor(props) {
-	// 	super(props)
 
-	// 	this.state = {
-	// 		email: '',
-	// 		password: '',
-	// 		passwordConfirmation: '',
-	// 	}
-	// }    
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -118,11 +110,7 @@ const SignUp = (props) => {
                         />
                     </Form.Group>
                     <br />
-
-{/* //                     <Button className='addButton' variant='primary' type='submit'> */}
-
                     <Button className='authButtons' variant='primary' type='submit'>
-
                         Submit
                     </Button>
                 </Form>

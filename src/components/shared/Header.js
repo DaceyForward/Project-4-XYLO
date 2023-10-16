@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
-// import './index.css'
 
 const linkStyle = {
     color: 'white',
@@ -22,16 +21,6 @@ const authenticatedOptions = (
 				Playroom
 			</Link>
 		</Nav.Item>
-		{/* <Nav.Item className='m-2'>
-			<Link to='create-toy' style={linkStyle}>
-				Add Toy
-			</Link>
-		</Nav.Item>
-		<Nav.Item className='m-2'>
-			<Link to='create-rotation' style={linkStyle}>
-				Add Rotation
-			</Link>
-		</Nav.Item> */}
 		<Nav.Item className='m-2'>
 			<Link to='change-password' style={linkStyle}>
 				Change Password

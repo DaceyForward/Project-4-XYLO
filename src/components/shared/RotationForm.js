@@ -79,7 +79,6 @@ const RotationForm = (props) => {
             </Form>
         </Container>
     )
-
 }
 
 export default RotationForm

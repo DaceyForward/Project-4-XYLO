@@ -1,17 +1,15 @@
 import { Container, Card } from 'react-bootstrap'
-import Stack from 'react-bootstrap/Stack';
+// import Stack from 'react-bootstrap/Stack';
 // import Image from 'react-bootstrap/Image';
 
 const About = () => {
-	// const { msgAlert, user } = props
-	// console.log('props in home', props)
 
 	return (
 		<Container className='m-2' style={{ textAlign: 'center' }}>
 			<h1>About Xylo</h1>
             <h2>The Digital Toy Box</h2>
 			<p>Xylo is an online playroom toy rotation creation app! It is your digital toy box inventory, where you can create the perfect toy rotation for your kiddos. If your current playroom is just a dumping ground for all things CHILD, much like my own, then Xylo can help you get organized and keep your little ones engaged. In your Xylo playroom, you can build an inventory to create your digital toy box, then customize each rotation in any way you like!</p>
-            <Stack gap={2} >
+           
 				<Card >
 					<Card.Img variant="top" src="./images/mess.png" />
 					<Card.Body className='cardBody'>
@@ -30,7 +28,7 @@ const About = () => {
 					</Card.Body>
 				</Card>
 				<br />
-			</Stack>
+		
 		</Container>
 	)
 }

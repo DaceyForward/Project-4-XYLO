@@ -47,7 +47,6 @@ const ToysIndex = (props) => {
     useEffect(() => {
         if (toys && searchInput) {
             console.log('filtered toys', toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
-            // return (toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
             return setDisplayToys(displayToys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
         }
         else if (searchInput === '') {
@@ -55,15 +54,6 @@ const ToysIndex = (props) => {
         }
     }, [searchInput, toys])
 
-
-    // useEffect(() => {
-    //     filterToys(toys && searchInput)
-    //         .then(res => {
-    //             setToys(toys.filter((toy) => toy.name.toLowerCase().includes(searchInput.toLowerCase())))
-    //         })
-    //         .then
-  
-    //     }, [searchInput])
     console.log('the toys in ToyIndex', toys)
     console.log('the displayToys', displayToys)
     // we need to account for multiple potential states of our data
@@ -79,10 +69,6 @@ const ToysIndex = (props) => {
     } else if (displayToys.length === 0) {
         return <p>Add Some Toys!</p>
     }
-    // console.log('the toys in ToyIndex', toys)
-    // console.log('the displayToys', displayToys)
-
-
 
     const toyCards = displayToys.map(toy => (
     <>
@@ -94,9 +80,6 @@ const ToysIndex = (props) => {
                         Details
                     </Link>
                 </Card.Text>
-                {/* { toy.owner ? 
-                    <Card.Footer >owner: {toy.owner.firstName}</Card.Footer>
-                : null } */}
             </Card.Body>
         </Card>
     </>
@@ -111,26 +94,14 @@ const ToysIndex = (props) => {
                     setSearchInput={setSearchInput} 
                     displayToys={displayToys}
                     setDisplayToys={setDisplayToys}
-                    // filterText={filterText}
-                    // handleChange={setFilterText}/>
                     />
             </div>
             <br />
-            {/* <Link to='/create-toy' className='newToy btn btn-info'>
-                Add A New Toy
-            </Link> */}
-            {/* <br />
-            <br /> */}
             <div className="container-md" style={ cardContainerLayout }>
                 { toyCards }
             </div>
-            {/* <div>
-                {filteredToys.map((toy) => (
-                    key={toy.name}))}
-            </div> */}
         </Container>
     )
 }
 
-// export our component
 export default ToysIndex

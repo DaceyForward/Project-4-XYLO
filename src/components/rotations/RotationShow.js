@@ -11,7 +11,7 @@ import { Container, Card, Button } from 'react-bootstrap'
 // we'll need to import an api function to grab an individual rotation
 import { detailRotation, updateRotation, deleteRotation } from '../../api/rotation'
 
-import { detailRotationSuccess, detailRotationFailure, deleteRotationSuccess, deleteRotationFailure } from '../shared/AutoDismissAlert/messages'
+import { detailRotationFailure, deleteRotationSuccess, deleteRotationFailure } from '../shared/AutoDismissAlert/messages'
 
 // we're going to use route parameters to get the id of the rotation we're trying to retrieve from the server.
 // then we use that id with our api call function
@@ -93,7 +93,6 @@ const RotationShow = (props) => {
                     msgAlert={msgAlert}
                     triggerRefresh={() => setUpdated(prev => !prev)}
                     user={user}
-                    // toy={toy}
                 />
             ))
         } else {
@@ -121,14 +120,6 @@ const RotationShow = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button className="m-2" variant="info"
-                            // onClick={() => setRotationModalShow(true)}
-                        >
-                            Add your rotation!
-                        </Button> */}
-                        {/* {
-                            rotation.owner && user && rotation.owner._id === user._id
-                            ? */}
                             <>
                                 <Button 
                                     className="m-2" variant="warning"
@@ -143,9 +134,6 @@ const RotationShow = (props) => {
                                     Delete
                                 </Button>
                             </>
-                        {/* //     :
-                        //     null
-                        // } */}
                     </Card.Footer>
                 </Card>
             </Container>
@@ -161,13 +149,6 @@ const RotationShow = (props) => {
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 rotation={rotation}
             />
-            {/* <NewRotationModal 
-                rotation={rotation}
-                show={rotationModalShow}
-                msgAlert={msgAlert}
-                handleClose={() => setRotationModalShow(false)}
-                triggerRefresh={() => setUpdated(prev => !prev)}
-            /> */}
         </>
     )
 }

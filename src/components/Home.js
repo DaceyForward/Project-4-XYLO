@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const Home = (props) => {
 	const { msgAlert, user } = props
-	// console.log('props in home', props)
 
 	const authenticatedOptions = (
 		<Link to={'/sign-up'} className='info btn btn-info'>
@@ -33,14 +32,8 @@ const Home = (props) => {
 			<Link to={'/about'} className='info btn btn-info'>
                 Learn More!
             </Link>
-			{/* <br />
-			<br /> */}
 
 			{user ? null : authenticatedOptions}
-
-			{/* <Link to={'/sign-up'} className='info btn btn-info'>
-                Sign Up Here!
-            </Link> */}
 
 		</Container>
 	)

@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import RotationForm from '../shared/RotationForm'
 import { updateRotationSuccess, updateRotationFailure} from '../shared/AutoDismissAlert/messages'
-import { updateRotation } from '../../api/rotation'
+// import { updateRotation } from '../../api/rotation'
 
 // this modal has its own props that it needs in order to open and close
 // since we will be using the RotationForm as well, we'll need those props
@@ -27,12 +27,6 @@ const EditRotationModal = (props) => {
             if (e.target.type === 'number') {
                 updatedValue = parseInt(e.target.value)
             }
-
-            // if (updatedName === 'adoptable' && e.target.checked) {
-            //     updatedValue = true
-            // } else if (updatedName === 'adoptable' && !e.target.checked) {
-            //     updatedValue = false
-            // }
 
             const updatedRotation = { [updatedName] : updatedValue }
 

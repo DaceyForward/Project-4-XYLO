@@ -13,14 +13,13 @@ Xylo is an online playroom toy rotation creation app! It is your digital toy box
 ## User Stories
 - As a user, I want to see a home page with links and a login or sign up button.
 - As a user, I want the ability to log in and log out.
-- As a user, I want to click on a link to see a list of all the toys, with photos.
-- As a user, I want to click on a link to see a list of all my toys, with photos.
+- As a user, I want to click on a link to see a list of all the toys.
 - As a user, I want to click on a link to see a list of all of my created toy rotations.
 - As a user, I want to see the list of my rotations, with a link to a details page with more information.
 - As a user, I want to see a list of all the toys that have been added to a specific rotation.
 - As a user, I want the ability to add or delete my own toys.
-- As a user, I want the ability to add a photo of my toys.
 - As a user, I want to see a link I can click on to access my saved information.
+- As a user, I want the ability to add photos of toys. (Bonus)
 - As a user, I want the ability to sort or filter through all the toys. (Bonus)
 - As a user, I want the ability to search for toys with a search bar. (Bonus)
 - As a user, I want the ability to create time frames for my toy rotations and get a reminder to rotate upon logging in. (Bonus)
@@ -58,14 +57,23 @@ font-family: 'Yomogi', cursive;
 ![app wireframe1](https://i.imgur.com/F1EP6jm.jpg)
 
 ## MVP SHOWCASE
-(Screenshots here)
+![s1](https://i.imgur.com/52BHDF9.png)
+![s2](https://i.imgur.com/33L57SD.png)
+![s3](https://i.imgur.com/swV6QGb.png)
+![s4](https://i.imgur.com/MRleicd.png)
+![s5](https://i.imgur.com/bIYV5ue.png)
+![s6](https://i.imgur.com/x9qQykb.png)
+![s7](https://i.imgur.com/SGfinyu.png)
+![s8](https://i.imgur.com/PWSQ5dE.png)
+
 
 ### Future Versions
 - Expand to lessons and curriculum
-- 
-
-### Getting Started
-Xylo
+- Drap and Drop toys to rotation
+- Calendar to show duration of toy rotation
+- Photos displayed
+- Resources page
+- Reminders when rotations willl start/end
 
 ### Deployed App
 Xylo: 
